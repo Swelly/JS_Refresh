@@ -1,14 +1,32 @@
 // 'window' object is the "GOD" object
 // global variables get attached to the window
 var startButton;
+var stopButton;
+var counter;
 
 window.onload = function () {
-  var h1 = document.getElementsByTagName('h1')[0];
-  alert('hey it worked!');
+  // var h1 = document.getElementsByTagName('h1')[0];
+  // alert('hey it worked!');
   startButton = document.getElementById('start_counter');
+  stopButton = document.getElementById('stop_counter');
+  stopButton.style.display = "none";
+
+
   startButton.onclick = function () {
     console.log("the button was clicked... nice");
+    counter = setInterval(count(), 1000);
+    startButton.style.display = "none";
+    stopButton.style.display = "inline";
   };
+
+
+  stopButton.onclick = function () {
+    console.log("okay i'll stop");
+    clearInterval(counter);
+    startButton.style.display = "inline";
+    stopButton.style.display = "none";
+  };
+
 };
 
 // Primitive datatypes
@@ -106,5 +124,5 @@ function count () {
   return tick;
 }
 
-var counter = setInterval(count(), 100);
-clearInterval(counter);
+// var counter = setInterval(count(), 100);
+// clearInterval(counter);
