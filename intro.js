@@ -50,13 +50,13 @@ if (liftingIsFun) {
 // if else | else if
 if (myAge < 150) {
   //some code
-  "I'm alive";
+  console.log("I'm alive");
 } else if (myAge > 0) {
   // mo code
-  "I'm alive";
+  console.log("I'm alive");
 } else {
   //final code
-  "probably dead :(";
+  console.log("probably dead :(");
 }
 
 // does an iteration on myAge from 20 - 150
