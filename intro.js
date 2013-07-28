@@ -1,8 +1,14 @@
 // 'window' object is the "GOD" object
 // global variables get attached to the window
+var startButton;
+
 window.onload = function () {
   var h1 = document.getElementsByTagName('h1')[0];
   alert('hey it worked!');
+  startButton = document.getElementById('start_counter');
+  startButton.onclick = function () {
+    console.log("the button was clicked... nice");
+  };
 };
 
 // Primitive datatypes
@@ -92,7 +98,13 @@ Person.say = function () {
 
 // intervals
 function count () {
-  console.log(i);
+  var timer = 0;
+  function tick () {
+    timer++;
+    console.log(timer);
+  }
+  return tick;
 }
-var counter = setInterval(count, 1000);
+
+var counter = setInterval(count(), 100);
 clearInterval(counter);
