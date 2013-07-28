@@ -6,9 +6,10 @@ window.onload = function () {
 };
 
 // Primitive datatypes
-var myName = 'Wes';
-var myAge = 20;
-var isLazy = false;
+// these are global variables
+var myName = 'Window MAN';
+var myAge =  100000;
+var isLazy = true;
   // 'global' all caps
 var MY_TRUE_LOVE = 'Pashmeena';
 // null
@@ -51,3 +52,47 @@ function listToDo(things) {
     console.log("i have to " + things[i]);
   }
 }
+
+// Objects
+
+// object literal
+  // var person = {
+  //   // these are attached
+  //   // to person object
+  //   name: 'Wes',
+  //   age: 20,
+  //   isLazy: false,
+  //   // embed function in
+  //   // person object
+  //   greeting: function() {
+  //     return "hello";
+  //   },
+  //   sayName: function() {
+  //     return "Hello, my name is " + this.name;
+  //   }
+  // };
+
+function Person(name, age, isLazy) {
+  this.name = name;
+  this.age = age;
+  this.isLazy = isLazy;
+}
+// assign methods to objects via prototype
+Person.prototype.sayName = function() {
+  return "Hello my name is " + this.name;
+};
+
+var p1 = new Person("Wes", 20, true);
+
+// class function not instance function
+Person.say = function () {
+  return "Hello I am of the Person class";
+};
+
+
+// intervals
+function count () {
+  console.log(i);
+}
+var counter = setInterval(count, 1000);
+clearInterval(counter);
