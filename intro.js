@@ -33,3 +33,15 @@ if (myAge < 150) {
   //final code
   "probably dead :(";
 }
+
+// does an iteration on myAge from 20 - 150
+// while (myAge > 0 && myAge < 150) {
+//   myAge++;// myAge = myAge + 1
+//   console.log(myAge);
+// }
+
+// My Array - looping through
+var thingsToDo = ["go to movies", "go shopping", "make dinner", "do laundry"];
+for (var i = 0; i < thingsToDo.length; i++) {
+  console.log("I have to " + thingsToDo[i]);
+}
