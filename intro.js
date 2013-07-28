@@ -45,3 +45,9 @@ var thingsToDo = ["go to movies", "go shopping", "make dinner", "do laundry"];
 for (var i = 0; i < thingsToDo.length; i++) {
   console.log("I have to " + thingsToDo[i]);
 }
+// function to loop through an array
+function listToDo(things) {
+  for (var i = 0; i < things.length; i++) {
+    console.log("i have to " + things[i]);
+  }
+}
